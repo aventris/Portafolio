@@ -1,0 +1,37 @@
+@import "variables";
+$menu-item-height: 40px;
+$sidebar-width: 200px;
+
+.sidebar {
+  height: calc(100vh - 1px - $header-height);
+  width: $sidebar-width;
+
+  position: absolute;
+  top: $header-height;
+  left: -$sidebar-width;
+
+  border: 1px solid red;
+  background-color: bisque;
+
+  transition: transform 150ms;
+
+  &.open {
+    transition: transform 600ms;
+    transform: translateX($sidebar-width);
+  }
+}
+
+.navigation {
+  background: #00dd00;
+
+  li {
+    height: $menu-item-height;
+    line-height: $menu-item-height;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      background: aqua;
+      border-color: red;
+    }
+  }
+}

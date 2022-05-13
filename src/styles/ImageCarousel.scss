@@ -1,0 +1,42 @@
+.carousel-container {
+  width: 300px;
+}
+
+.mySwiper {
+  /* width: 100%; */
+  height: 100%;
+  background-color: red;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  background-image: url("@icons/arrow_icon.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+
+  box-shadow: 1px 1px 3px grey;
+}
+.swiper-button-prev {
+  box-shadow: 1px -1px 3px grey;
+  transform: rotate(180deg);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-image {
+  height: 100%;
+}
+.swiper-image-container {
+  /* height: 200px; */
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
