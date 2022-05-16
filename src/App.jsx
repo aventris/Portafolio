@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "@components/Home";
+import Demo from "./pages/Demo";
 
 import Layout from "./layout/Layout";
 
@@ -11,7 +12,8 @@ const App = () => {
   return (
     <React.Fragment>
       <Layout>
-        <Home />
+        {/* <Home /> */}
+        <Demo />
       </Layout>
     </React.Fragment>
   );

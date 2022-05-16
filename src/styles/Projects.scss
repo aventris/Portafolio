@@ -40,7 +40,7 @@ $project-card-height: 300px;
   background: peachpuff;
   display: grid;
   grid-template-columns: minmax(300px, 500px) minmax(150px, 350px);
-  grid-template-rows: 250px;
+  grid-template-rows: 250px 40px;
   border-radius: 15px;
 }
 
@@ -53,6 +53,27 @@ $project-card-height: 300px;
   }
 }
 
+.project-demo {
+  grid-column: 1/3;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  p {
+    margin-right: 10px;
+  }
+}
+
+.project-demo-card {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .visible {
   opacity: 1;
 }
@@ -60,5 +81,9 @@ $project-card-height: 300px;
 @media (max-width: 600px) {
   .project {
     grid-template-columns: minmax(275px, 1fr);
+    grid-template-rows: 250px 250px 40px;
+  }
+  .project-demo {
+    grid-column: 1;
   }
 }
