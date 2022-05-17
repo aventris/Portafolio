@@ -1,20 +1,20 @@
 import React from "react";
 import Home from "@components/Home";
 import Demo from "./pages/Demo";
-
-import Layout from "./layout/Layout";
+import Contact from "@components/Contact";
 
 import "@styles/App.scss";
-import ImageCarousel from "./components/ImageCarousel";
+import Sidebar from "./layout/Sidebar";
 
 const App = () => {
-  console.log("Holis");
   return (
     <React.Fragment>
-      <Layout>
-        {/* <Home /> */}
-        <Demo />
-      </Layout>
+      <Sidebar />
+      <div className="maincontent">
+        <Home />
+        {/* <Demo /> */}
+        <Contact />
+      </div>
     </React.Fragment>
   );
 };

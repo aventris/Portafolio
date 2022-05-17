@@ -1,37 +1,209 @@
 @import "variables";
-$menu-item-height: 40px;
-$sidebar-width: 200px;
+
+$background-color: #121212;
+$error-color: #cf6679;
+
+$primary-surface-color: #484848;
+$primary-aux-color: #6d6d6d;
+$primary-color: #bb86fc;
+$secoundary-color: #03dac5;
+$text-color: #fff;
 
 .sidebar {
-  height: calc(100vh - 1px - $header-height);
   width: $sidebar-width;
+  background: $background-color;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: width 500ms ease;
+  box-shadow: 0 0 3px -1px rgb(194, 194, 194);
+}
 
-  position: absolute;
-  top: $header-height;
-  left: -$sidebar-width;
+/* Styles when the sidebar is closed */
+.sidebar.closed {
+  width: 50px;
+  transition: width 100ms ease;
+  & + .maincontent {
+    transition: all 100ms ease;
+    width: calc(100% - $sidebar-closed-width);
+    left: $sidebar-closed-width;
+  }
 
-  border: 1px solid red;
-  background-color: bisque;
+  .nav-links {
+    /* Nav item when its closed */
+    li a > .link_name {
+      position: absolute;
+      top: -15px;
+      padding: 0 10px;
+      left: 100%;
+      height: 40px;
+      line-height: 40px;
+      background: peachpuff;
+      border-radius: 0 4px 4px 0;
+      font-size: 16px;
+      visibility: hidden;
+    }
+    li:hover a > .link_name {
+      transition: all 500ms ease;
+      background-color: $primary-surface-color;
+      top: 0;
+      visibility: visible;
+    }
 
-  transition: transform 150ms;
+    /* Sub menu (dropdown) styles when it´s closed */
 
-  &.open {
-    transition: transform 600ms;
-    transform: translateX($sidebar-width);
+    li {
+      .sub-menu {
+        max-height: none;
+        position: absolute;
+        left: 100%;
+        top: -15px;
+        padding: 0;
+        border-radius: 0 5px 5px 0;
+        visibility: hidden;
+        li {
+          &:first-child {
+            opacity: 1;
+            color: $primary-color;
+            &:hover {
+              background: none;
+            }
+            height: 40px;
+            line-height: 40px;
+          }
+          padding: 0 20px;
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+      &:hover {
+        .sub-menu {
+          transition: all 300ms ease;
+          visibility: visible;
+          top: 0px;
+        }
+      }
+    }
+  }
+}
+/* Sidebar title */
+.sidebar-title {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  font-size: 25px;
+  color: #fff;
+
+  i {
+    min-width: 52px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
-.navigation {
-  background: #00dd00;
+/* Sidebar item */
+.link_name {
+  font-size: 18px;
+}
 
-  li {
-    height: $menu-item-height;
-    line-height: $menu-item-height;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    &:hover {
-      background: aqua;
-      border-color: red;
+/* Sidebar dropdown item */
+.icon_link {
+  //width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .arrow-icon {
+    transition: transform 100ms ease;
+    &.open {
+      transition: transform 500ms ease;
+      transform: rotate(-180deg);
     }
   }
+}
+
+/* item list container */
+.nav-links {
+  padding: 30px 0 0 0;
+  list-style: none;
+
+  li.active {
+    background-color: $primary-surface-color;
+  }
+  li {
+    position: relative;
+    &:hover {
+      background-color: $primary-surface-color;
+      color: $primary-color;
+    }
+    color: rgba($text-color, 0.6);
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    i {
+      min-width: 52px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+/* Sub menu styling */
+.sidebar .nav-links li .sub-menu {
+  /* Sub menu container */
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  max-height: 0;
+  transition: max-height 100ms ease;
+  overflow: hidden;
+  background: $primary-surface-color;
+  li {
+    padding-left: 50px;
+    opacity: 0.5;
+    &:hover {
+      //background: $primary-aux-color;
+      color: $text-color;
+      opacity: 1;
+    }
+  }
+  &.visible {
+    max-height: 150px;
+    transition: max-height 500ms ease;
+    /*   background: $primary-surface-color; */
+  }
+  a {
+    font-size: 15px;
+    padding: 3px 0;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.sidebar-footer {
+  text-align: center;
+  font-size: 12px;
+  color: rgba($text-color, 0.6);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
 }

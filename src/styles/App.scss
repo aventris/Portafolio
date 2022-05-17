@@ -1,10 +1,25 @@
+@import "variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 * {
-  padding: 0;
+  //padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   height: 100vh;
-  overflow-x: hidden;
+  width: 100%;
+  overflow: auto;
+}
+
+.maincontent {
+  width: calc(100% - $sidebar-width);
+  left: $sidebar-width;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: auto;
+  transition: all 500ms ease;
 }
