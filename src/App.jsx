@@ -13,7 +13,6 @@ const App = () => {
       <div className="maincontent">
         <Home />
         {/* <Demo /> */}
-        <Contact />
       </div>
     </React.Fragment>
   );

@@ -14,8 +14,8 @@ const projectInfo = {
   },
   todo: {
     title: `To-Do List`,
-    description: `This is a web app of To-Do list. Your To-Do list will be temporary
-    stored in the browser's local storage`,
+    description: `This is a web app of a To-Do list. Your To-Do list will be temporary
+    store in the browser's local storage`,
     techs: "React | Scss | JavaScript (ES6+)",
     demo: "https://sad-lalande-e0bbcb.netlify.app/",
     github: "https://github.com/aventris/React-TodoList",

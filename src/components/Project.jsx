@@ -5,17 +5,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const Project = ({ title, description, techs, demo, github, images }) => {
-  const state = true;
-
+const Project = ({
+  state,
+  title,
+  description,
+  techs,
+  demo,
+  github,
+  images,
+}) => {
   return (
     <div className={`project-container ${state ? "visible" : ""}`}>
       <div className={`project`}>
+        <h2 className="project-title">{title}</h2>
         <div className="project-carousel">
           <ImageCarousel images={images} />
         </div>
         <div className="project-info">
-          <h2>{title}</h2>
           <h4>Teconogies used:</h4>
           <p>{techs}</p>
           <h4>Project description:</h4>

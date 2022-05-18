@@ -8,7 +8,6 @@ import "@styles/Demo.scss";
 const aux = ["Web design", "Card design", "Login form"];
 
 const SidebarSubMenu = ({ items, name, icon, large }) => {
-  console.log("Large: ", large);
   const [subMenu, setSubmenu] = useState(false);
   const toggleSubMenu = () => {
     setSubmenu(!subMenu);
@@ -23,7 +22,6 @@ const SidebarSubMenu = ({ items, name, icon, large }) => {
   };
 
   useEffect(() => {
-    console.log("ok");
     document.addEventListener("click", handleClickOutside, true);
     return () => {
       document.removeEventListener("click", handleClickOutside, true);

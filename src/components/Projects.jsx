@@ -7,18 +7,18 @@ import "@styles/Projects.scss";
 
 const Projects = () => {
   const [state, setState] = useState(true);
-
+  console.log(state);
   const toggle = () => {
     setState(!state);
   };
   return (
-    <section className="projects">
-      <h1>Proyects</h1>
+    <div className="projects">
+      <h1>Projects</h1>
       <button onClick={toggle}>Click me</button>
 
-      <Project {...projectInfo.yardSale} />
-      <Project {...projectInfo.todo} />
-    </section>
+      <Project {...projectInfo.yardSale} state={state} />
+      <Project {...projectInfo.todo} state={state} />
+    </div>
   );
 };
 

@@ -1,19 +1,24 @@
+@import "variables";
+
 $translate-position: 100px;
 $transition-timing-function: ease;
 $transition-duration: 500ms;
 $project-card-height: 300px;
 
 .projects {
-  max-width: 700px;
+  width: 100%;
+  max-width: $content-max-width;
   padding: 10px;
-  margin: 0 auto;
-  background: aqua;
+  border-top: 1px solid white;
+  h1 {
+    margin-bottom: 50px;
+    color: $primary-color;
+  }
 }
 
 .project-container {
   width: 100%;
   margin: 20px 0;
-  /*  height: $project-card-height; */
   position: relative;
   transition: transform $transition-duration $transition-timing-function,
     opacity $transition-duration $transition-timing-function;
@@ -35,31 +40,43 @@ $project-card-height: 300px;
 }
 
 .project {
+  padding: 10px 5px;
   width: 100%;
   /*  height: $project-card-height; */
-  background: peachpuff;
+  background: $primary-card-color;
   display: grid;
-  grid-template-columns: minmax(300px, 500px) minmax(150px, 350px);
-  grid-template-rows: 250px 40px;
+  align-items: center;
+  grid-template-columns: minmax(100px, 3fr) 2fr;
+  //grid-template-rows: 1fr 50px;
   border-radius: 15px;
 }
-
+.project-title {
+  margin: 10px 0;
+  grid-column: 1/3;
+  text-align: center;
+  color: $secoundary-color;
+}
 .project-info {
   padding: 10px;
   height: 100%;
   text-align: center;
+  color: white;
+
+  word-break: normal;
   p {
     font-size: 14px;
+    opacity: 0.6;
   }
 }
 
 .project-demo {
+  height: 50px;
+  margin-top: 10px;
   grid-column: 1/3;
   gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   p {
     margin-right: 10px;
   }
@@ -67,11 +84,17 @@ $project-card-height: 300px;
 
 .project-demo-card {
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid $secoundary-color;
+  color: $secoundary-color;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  &:hover {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
 }
 
 .visible {
@@ -81,7 +104,10 @@ $project-card-height: 300px;
 @media (max-width: 600px) {
   .project {
     grid-template-columns: minmax(275px, 1fr);
-    grid-template-rows: 250px 250px 40px;
+    //grid-template-rows: 250px 250px 40px;
+  }
+  .project-title {
+    grid-column: 1;
   }
   .project-demo {
     grid-column: 1;

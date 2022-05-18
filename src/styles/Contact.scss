@@ -1,32 +1,50 @@
 @import "variables";
-$error-color: #b00020;
+$error-color: #cf6679;
 .contact {
+  border-top: 1px solid white;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .contact-wrapper {
-    width: 100%;
-    max-width: 700px;
-    background-color: peachpuff;
-    border-radius: 10px;
-    padding: 10px;
-    .button-wrapper {
-      width: fit-content;
-      margin: 0 auto;
-      .submit-button {
-        margin: 10px 0 0 0;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 4px;
-        text-align: center;
-        cursor: pointer;
-        &:hover {
-          box-shadow: 0 0 4px 0 #303030;
-        }
-        &:active {
-          box-shadow: 0 0 4px 0 #828282;
-        }
+  padding: 10px;
+  max-width: 700px;
+  width: calc(100% - 20px);
+  // margin: 0 10px;
+  h1 {
+    margin-bottom: 50px;
+    color: $primary-color;
+  }
+}
+
+.contact-wrapper {
+  background-color: $primary-card-color;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  h2 {
+    color: $secoundary-color;
+  }
+  p {
+    opacity: 0.6;
+  }
+  .button-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+    .submit-button {
+      margin: 10px 0 0 0;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      text-align: center;
+      background: none;
+      border: 1px solid $secoundary-color;
+      color: $secoundary-color;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+      &:active {
+        border: 1px solid white;
+        color: white;
       }
     }
   }
@@ -63,12 +81,16 @@ $error-color: #b00020;
     padding: 5px 2px;
     border-radius: 4px;
     outline: none;
+    background-color: $primary-surface-color;
+    color: rgba(white, 0.7);
     &:hover {
-      box-shadow: 0 0 4px 0px #303030;
+      box-shadow: 0 0 3px 0px #121212;
+      color: white;
     }
     &:focus {
+      color: white;
       //outline: 1px solid orange;
-      box-shadow: 0 0 4px 0px #828282;
+      box-shadow: 0 0 3px 0px #121212;
     }
   }
   .error {

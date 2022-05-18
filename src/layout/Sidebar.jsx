@@ -13,7 +13,6 @@ import {
 import "@styles/Sidebar.scss";
 
 const SidebarSubMenu = ({ items, name, icon, large }) => {
-  console.log("Large: ", large);
   const [subMenu, setSubmenu] = useState(false);
   const toggleSubMenu = () => {
     setSubmenu(!subMenu);

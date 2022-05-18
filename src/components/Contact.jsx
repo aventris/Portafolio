@@ -10,7 +10,6 @@ const Contact = () => {
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
         data
       );
-    console.log("VALID: ", valid);
     if (!valid && data.length > 0) setError(true);
     else setError(false);
   };
@@ -19,7 +18,6 @@ const Contact = () => {
     event.preventDefault();
     console.log("Submit");
   };
-  console.log("ERROR: ", error);
 
   const handleInput = (event) => {
     const input = event.currentTarget;
@@ -28,8 +26,9 @@ const Contact = () => {
   };
   return (
     <div className="contact">
+      <h1>Contact</h1>
       <div className="contact-wrapper">
-        <h1>Contact me</h1>
+        <h2>Contact me!</h2>
         <p>Let's make some awesome project together</p>
         <form action="" onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
