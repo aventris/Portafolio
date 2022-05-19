@@ -34,8 +34,8 @@ const SidebarSubMenu = ({ items, name, icon, large }) => {
   }, []);
 
   return (
-    <li onClick={toggleSubMenu} ref={ref} className={subMenu ? "active" : ""}>
-      <div className="icon_link">
+    <li onClick={toggleSubMenu} ref={ref}>
+      <div className={`icon_link ${subMenu ? "active" : ""}`}>
         <a>
           <i>{icon}</i>
           {large && <span className="link_name">{name}</span>}

@@ -1,12 +1,13 @@
 @import "variables";
+
 $error-color: #cf6679;
+
 .contact {
   border-top: 1px solid white;
   height: 100vh;
   padding: 10px;
-  max-width: 700px;
-  width: calc(100% - 20px);
-  // margin: 0 10px;
+  max-width: $content-max-width;
+  width: 100%;
   h1 {
     margin-bottom: 50px;
     color: $primary-color;
