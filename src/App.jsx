@@ -5,6 +5,7 @@ import Contact from "@components/Contact";
 
 import "@styles/App.scss";
 import Sidebar from "./layout/Sidebar";
+import BackgroundAnimation from "@components/BackgroundAnimation";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <div className="maincontent">
         <Home />
         {/* <Demo /> */}
+        <BackgroundAnimation />
       </div>
     </React.Fragment>
   );

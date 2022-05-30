@@ -1,0 +1,21 @@
+@import "variables";
+
+.background-animation {
+  background-color: $background-color;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+.background-animation {
+  .unit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    border-radius: 10px;
+  }
+}

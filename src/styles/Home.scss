@@ -1,37 +1,57 @@
 @import "variables";
 
-.background-image {
+.title {
   width: calc(100% + 20px);
   height: 100vh;
-  background-color: $primary-surface-color;
-  background-image: url("@images/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-
-.background-pannel {
-  //width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  text-align: right;
-  padding: 50px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  p {
-    opacity: 0.6;
-    font-size: min(1.5vw, 16px);
-  }
-  section {
-    max-width: $content-max-width;
+  color: white;
+  text-align: right;
+
+  .background-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    padding: 50px;
+    background-image: url("@images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(#121212, 0.6);
+      z-index: 0;
+    }
+    div {
+      //position: absolute;
+      z-index: 1;
+      max-width: $content-max-width;
+      h1 {
+        color: white;
+      }
+      p {
+        opacity: 0.6;
+        font-size: min(1.5vw, 16px);
+      }
+    }
   }
 }
+
 .home {
-  background: $background-color;
+  //background: $background-color;
   display: flex;
   flex-direction: column;
   align-items: center;

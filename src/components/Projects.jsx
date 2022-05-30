@@ -18,6 +18,7 @@ const Projects = () => {
 
       <Project {...projectInfo.yardSale} state={state} />
       <Project {...projectInfo.todo} state={state} />
+      <Project {...projectInfo.memorama} state={state} />
     </div>
   );
 };

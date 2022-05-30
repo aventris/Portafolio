@@ -1,4 +1,4 @@
-/* Yard Sale proyect images */
+/* Yard Sale project images */
 import yardImg1 from "@images/yardsale/yard_sale_1.png";
 import yardImg2 from "@images/yardsale/yard_sale_2.png";
 import yardImg3 from "@images/yardsale/yard_sale_3.png";
@@ -8,11 +8,16 @@ import yardImg6 from "@images/yardsale/yard_sale_6.png";
 import yardImg7 from "@images/yardsale/yard_sale_7.png";
 import yardImg8 from "@images/yardsale/yard_sale_8.png";
 
-/* To Dos proyect images */
+/* To Dos project images */
 import todoImg1 from "@images/todos/todo_1.png";
 import todoImg2 from "@images/todos/todo_2.png";
 import todoImg3 from "@images/todos/todo_3.png";
 import todoImg4 from "@images/todos/todo_4.png";
+
+/* Memorama project images */
+import memorama1 from "@images/memorama/memorama-1.gif";
+import memorama2 from "@images/memorama/memorama-2.gif";
+import memorama3 from "@images/memorama/memorama-3.gif";
 
 const yardSaleImages = [
   yardImg1,
@@ -26,4 +31,5 @@ const yardSaleImages = [
 ];
 const todoImages = [todoImg1, todoImg2, todoImg3, todoImg4];
 
-export { yardSaleImages, todoImages };
+const memoramaImages = [memorama1, memorama2, memorama3];
+export { yardSaleImages, todoImages, memoramaImages };

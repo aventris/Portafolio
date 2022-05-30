@@ -2,13 +2,17 @@ import React from "react";
 import Projects from "@components/Projects";
 import Contact from "@components/Contact";
 import "@styles/Home.scss";
+
 import profileImage from "@images/profile.jpg";
+
+import backgroundImage from "@images/background.jpg";
+
 const Home = () => {
   return (
     <div className="home">
-      <div className="background-image">
-        <div className="background-pannel">
-          <section>
+      <div className="title">
+        <div className="background-image">
+          <div>
             <h1>Front End Developer</h1>
             <p>Hi!</p>
             <p>
@@ -18,7 +22,7 @@ const Home = () => {
               front-end/full-stack position, i like challenges in order to lear
               new skills.
             </p>
-          </section>
+          </div>
         </div>
       </div>
       <div className="about">

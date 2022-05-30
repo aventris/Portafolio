@@ -1,4 +1,8 @@
-import { yardSaleImages, todoImages } from "@utils/projectImages";
+import {
+  yardSaleImages,
+  todoImages,
+  memoramaImages,
+} from "@utils/projectImages";
 
 const projectInfo = {
   yardSale: {
@@ -20,6 +24,14 @@ const projectInfo = {
     demo: "https://sad-lalande-e0bbcb.netlify.app/",
     github: "https://github.com/aventris/React-TodoList",
     images: todoImages,
+  },
+  memorama: {
+    title: `Rick n' Mory Memorama`,
+    description: `A memory game with the characters from Rick n' Morty series`,
+    techs: "React | Scss | JavaScript (ES6+)",
+    demo: "https://enchanting-kulfi-9cb10c.netlify.app",
+    github: "https://github.com/aventris/Memory-Game",
+    images: memoramaImages,
   },
 };
 
