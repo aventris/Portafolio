@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import Home from "@components/Home";
 import Demo from "./pages/Demo";
 import Contact from "@components/Contact";
@@ -11,7 +12,7 @@ const App = () => {
   return (
     <React.Fragment>
       <Sidebar />
-      <div className="maincontent">
+      <div className="maincontent" id="aux">
         <Home />
         {/* <Demo /> */}
         <BackgroundAnimation />

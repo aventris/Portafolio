@@ -12,15 +12,30 @@
   -webkit-box-sizing: border-box;
 }
 
-body {
-  overflow: auto;
+body,
+#root,
+.maincontent {
+}
+html {
+  scroll-behavior: smooth;
+}
+#root {
+  height: 100vh;
 }
 
 .maincontent {
+  scroll-behavior: smooth;
   width: calc(100% - $sidebar-width);
+  height: 100%;
   left: $sidebar-width;
   position: relative;
-  overflow-y: auto;
-  overflow-x: auto;
+  overflow-y: scroll;
   transition: all 500ms ease;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
 }

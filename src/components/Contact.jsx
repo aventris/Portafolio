@@ -25,7 +25,7 @@ const Contact = () => {
     if (input.id === "email") validateEmail(input.value);
   };
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h1>Contact</h1>
       <div className="contact-wrapper">
         <h2>Contact me!</h2>

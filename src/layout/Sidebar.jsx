@@ -14,11 +14,11 @@ import "@styles/Sidebar.scss";
 
 const SidebarSubMenu = ({ items, name, icon, large }) => {
   const [subMenu, setSubmenu] = useState(false);
+  const ref = useRef(null);
+
   const toggleSubMenu = () => {
     setSubmenu(!subMenu);
   };
-
-  const ref = useRef(null);
 
   const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
@@ -54,7 +54,9 @@ const SidebarSubMenu = ({ items, name, icon, large }) => {
         )}
         {items.map((item, index) => (
           <li key={index}>
-            <a className="link_name">{item}</a>
+            <a href={`#${item.toLowerCase()}`} className="link_name">
+              {item}
+            </a>
           </li>
         ))}
       </ul>
@@ -65,7 +67,7 @@ const SidebarSubMenu = ({ items, name, icon, large }) => {
 const SidebarItem = ({ icon, name, large }) => {
   return (
     <li>
-      <a>
+      <a href={`#${name.toLowerCase()}`}>
         <i>{icon}</i>
         <span className="link_name">{name}</span>
       </a>

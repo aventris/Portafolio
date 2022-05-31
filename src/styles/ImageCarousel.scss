@@ -4,7 +4,6 @@
 
 .mySwiper {
   height: fit-content;
-  background-color: white;
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -33,8 +32,9 @@
 }
 .swiper-image-container {
   /* height: 200px; */
+  width: 100%;
   height: 100%;
-  width: auto;
+  //width: auto;
   display: flex;
   align-items: center;
   justify-content: center;

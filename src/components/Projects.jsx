@@ -6,19 +6,21 @@ import { projectInfo } from "@utils/projectInfo";
 import "@styles/Projects.scss";
 
 const Projects = () => {
-  const [state, setState] = useState(true);
-  console.log(state);
-  const toggle = () => {
-    setState(!state);
-  };
   return (
-    <div className="projects">
+    <div className="projects" id="project">
       <h1>Projects</h1>
-      <button onClick={toggle}>Click me</button>
-
-      <Project {...projectInfo.yardSale} state={state} />
-      <Project {...projectInfo.todo} state={state} />
-      <Project {...projectInfo.memorama} state={state} />
+      <div id="react">
+        <h2>React</h2>
+        {projectInfo.react.map((project) => (
+          <Project key={project.title} {...project} />
+        ))}
+      </div>
+      <div id="angular">
+        <h2>Angular</h2>
+        {projectInfo.angular.map((project) => (
+          <Project key={project.title} {...project} />
+        ))}
+      </div>
     </div>
   );
 };

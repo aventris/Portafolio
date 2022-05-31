@@ -3,7 +3,7 @@
 $translate-position: 100px;
 $transition-timing-function: ease;
 $transition-duration: 500ms;
-$project-card-height: 300px;
+$project-card-height: 700px;
 
 .projects {
   width: 100%;
@@ -14,27 +14,29 @@ $project-card-height: 300px;
     margin-bottom: 50px;
     color: $primary-color;
   }
+  & > div {
+    color: $primary-color;
+    margin: 10px 0;
+  }
+  overflow-x: hidden;
 }
 
 .project-container {
   width: 100%;
   margin: 20px 0;
-  position: relative;
   transition: transform $transition-duration $transition-timing-function,
     opacity $transition-duration $transition-timing-function;
   opacity: 0;
   &:nth-child(odd) {
-    top: 0;
-    right: -$translate-position;
+    transform: translateX($translate-position);
     &.visible {
-      transform: translateX(-$translate-position);
+      transform: translateX(0);
     }
   }
   &:nth-child(even) {
-    top: 0;
-    left: -$translate-position;
+    transform: translateX(-$translate-position);
     &.visible {
-      transform: translateX($translate-position);
+      transform: translateX(0);
     }
   }
 }
@@ -42,7 +44,8 @@ $project-card-height: 300px;
 .project {
   padding: 10px 5px;
   width: 100%;
-  /*  height: $project-card-height; */
+  display: inline-block;
+  /* max-height: $project-card-height; */
   background: $primary-card-color;
   display: grid;
   align-items: center;
@@ -51,6 +54,7 @@ $project-card-height: 300px;
   border-radius: 15px;
 }
 .project-title {
+  height: 37px;
   margin: 10px 0;
   grid-column: 1/3;
   text-align: center;

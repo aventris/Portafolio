@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ImageCarousel from "@components/ImageCarousel";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const Project = ({
-  state,
-  title,
-  description,
-  techs,
-  demo,
-  github,
-  images,
-}) => {
+const Project = ({ title, description, techs, demo, github, images }) => {
+  const [state, setState] = useState(false);
+  const observerRef = useRef(null);
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        setState(entry.isIntersecting);
+        if (entry.isIntersecting) observerRef.current.disconnect();
+      },
+      { threshold: 0.4 }
+    );
+
+    observerRef.current.observe(boxRef.current);
+    return () => {
+      observerRef.current.disconnect();
+    };
+  }, []);
+
   return (
-    <div className={`project-container ${state ? "visible" : ""}`}>
+    <div ref={boxRef} className={`project-container ${state ? "visible" : ""}`}>
       <div className={`project`}>
         <h2 className="project-title">{title}</h2>
         <div className="project-carousel">

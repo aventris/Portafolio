@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Projects from "@components/Projects";
 import Contact from "@components/Contact";
 import "@styles/Home.scss";
@@ -6,11 +6,25 @@ import "@styles/Home.scss";
 import profileImage from "@images/profile.jpg";
 
 import backgroundImage from "@images/background.jpg";
+const ulrFragment = ["home", "about", "react", "angular", "contact"];
 
 const Home = () => {
+  const handleInitialHash = () => {
+    let url = new URL(window.location);
+    const hash = url.hash.slice(1);
+    let el = document.getElementById(hash);
+    el.scrollIntoView();
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      handleInitialHash();
+    }, 500);
+  }, []);
+
   return (
     <div className="home">
-      <div className="title">
+      <div className="title" id="home">
         <div className="background-image">
           <div>
             <h1>Front End Developer</h1>
@@ -25,7 +39,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="about">
+      <div className="about" id="about">
         <h1>About me</h1>
         <div className="about-wrapper">
           <section className="about-info">
@@ -51,7 +65,7 @@ const Home = () => {
           </section>
         </div>
       </div>
-      <Projects />
+      <Projects onLoad={handleInitialHash} />
       <Contact />
     </div>
   );

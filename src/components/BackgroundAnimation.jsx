@@ -15,10 +15,8 @@ const BackgroundAnimation = () => {
       h = container.current.offsetHeight;
 
     unit.classList.add("unit");
+
     container.current.appendChild(unit);
-
-    console.log(w, h);
-
     gsap.set(unit, {
       x: random(0, w),
       y: h,
@@ -39,7 +37,6 @@ const BackgroundAnimation = () => {
   };
 
   useEffect(() => {
-    console.log("Effect");
     for (let i = 0; i < 50; i++) {
       createUnit();
     }
