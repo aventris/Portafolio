@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import "@styles/Contact.scss";
 
@@ -17,12 +18,26 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Submit");
+
+    emailjs
+      .sendForm(
+        "service_c384l2q",
+        "template_w5zlc3l",
+        "#myForm",
+        "OOCKNtQ9JZtQch_xR"
+      )
+      .then((res) => {
+        //console.log("Success!", res.status, res.text);
+      })
+      .catch((error) => {
+        console.log("Failed", error);
+      });
   };
 
   const handleInput = (event) => {
     const input = event.currentTarget;
-    setForm({ ...form, [input.id]: input.value });
-    if (input.id === "email") validateEmail(input.value);
+    setForm({ ...form, [input.name]: input.value });
+    if (input.name === "email") validateEmail(input.value);
   };
   return (
     <div className="contact" id="contact">
@@ -30,7 +45,7 @@ const Contact = () => {
       <div className="contact-wrapper">
         <h2>Contact me!</h2>
         <p>Let's make some awesome project together</p>
-        <form action="" onSubmit={handleSubmit} className="contact-form">
+        <form id="myForm" onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
             <div>
               <label htmlFor="name">Name</label>
@@ -40,7 +55,7 @@ const Contact = () => {
                 placeholder="Ismael Perez"
                 className="contact-input"
                 type="text"
-                id="name"
+                name="name"
               />
             </div>
             <div className={error ? "error" : ""}>
@@ -51,7 +66,7 @@ const Contact = () => {
                 placeholder="example@domain.com"
                 className="contact-input"
                 type="email"
-                id="email"
+                name="email"
               />
               {error && <p>Please enter a valid email.</p>}
             </div>
@@ -62,7 +77,7 @@ const Contact = () => {
             value={form.message}
             placeholder="Write your message here"
             className="contact-input"
-            id="message"
+            name="message"
           ></textarea>
           <div className="button-wrapper">
             <button

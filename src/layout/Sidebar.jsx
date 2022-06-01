@@ -76,7 +76,7 @@ const SidebarItem = ({ icon, name, large }) => {
 };
 
 const Sidebar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
