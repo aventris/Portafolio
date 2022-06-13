@@ -19,8 +19,8 @@ const ImageCarousel = ({ images }) => {
       slidesPerView={1}
       loop
     >
-      {images.map((image) => (
-        <SwiperSlide key={image} className="swiper-image-container">
+      {images.map((image, index) => (
+        <SwiperSlide key={index} className="swiper-image-container">
           <img src={image} alt="" className="swiper-image" />
         </SwiperSlide>
       ))}

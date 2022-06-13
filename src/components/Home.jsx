@@ -13,7 +13,7 @@ const Home = () => {
     let url = new URL(window.location);
     const hash = url.hash.slice(1);
     let el = document.getElementById(hash);
-    el.scrollIntoView();
+    if (el) el.scrollIntoView();
   };
 
   useEffect(() => {

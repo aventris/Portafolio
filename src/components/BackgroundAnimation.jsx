@@ -21,14 +21,16 @@ const BackgroundAnimation = () => {
       x: random(0, w),
       y: h,
       scale: random(0.2, 1),
-      opacity: random(0.1, 0.6),
+      opacity: random(0.2, 0.6),
     });
 
     gsap.to(unit, {
       rotate: 360,
-      y: random(0, h / 2),
-      opacity: 0,
-      duration: random(5, 15),
+      y: random(h / 3, -250),
+      //opacity: 0,
+      scale: 0,
+      duration: random(4, 15),
+      delay: random(1, 4),
       onComplete: () => {
         container.current.removeChild(unit);
         createUnit();

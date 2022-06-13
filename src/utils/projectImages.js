@@ -19,6 +19,13 @@ import memorama1 from "@images/memorama/memorama-1.gif";
 import memorama2 from "@images/memorama/memorama-2.gif";
 import memorama3 from "@images/memorama/memorama-3.gif";
 
+/* Cocktail BD project images */
+import cocktailbd1 from "@images/cocktaildb/cocktaildb-1.gif";
+import cocktailbd2 from "@images/cocktaildb/cocktaildb-2.gif";
+import cocktailbd3 from "@images/cocktaildb/cocktaildb-3.gif";
+import cocktailbd4 from "@images/cocktaildb/cocktaildb-4.gif";
+import cocktailbd5 from "@images/cocktaildb/cocktaildb-5.gif";
+
 const yardSaleImages = [
   yardImg1,
   yardImg2,
@@ -30,6 +37,13 @@ const yardSaleImages = [
   yardImg8,
 ];
 const todoImages = [todoImg1, todoImg2, todoImg3, todoImg4];
+const cocktailDBImages = [
+  cocktailbd1,
+  cocktailbd2,
+  cocktailbd3,
+  cocktailbd4,
+  cocktailbd5,
+];
 
 const memoramaImages = [memorama1, memorama2, memorama3];
-export { yardSaleImages, todoImages, memoramaImages };
+export { yardSaleImages, todoImages, memoramaImages, cocktailDBImages };

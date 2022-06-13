@@ -2,6 +2,7 @@ import {
   yardSaleImages,
   todoImages,
   memoramaImages,
+  cocktailDBImages,
 } from "@utils/projectImages";
 
 const projectInfo = {
@@ -11,11 +12,20 @@ const projectInfo = {
       description: `A functional online shop. You can add items to your cart, proceed to
      checkout and Paypal payment, it also has a user profile page. You can
      login as a user or administrator. The administrator has it's own
-     section to mage products, users and orders.`,
+     section to mage products, users and orders`,
       techs: "Angular | Scss | Typescript",
       demo: "https://romantic-jennings-5013dd.netlify.app/home",
       github: "https://github.com/aventris/Angular-Shop",
       images: yardSaleImages,
+    },
+    {
+      title: `Cocktail DB`,
+      description:
+        "A webpage containing a collection of drinks where you can check for the recipie of some cocktail. You can search a cocktail by name, ingredient or a specific tag ",
+      techs: "Angular | Scss | Typescript",
+      demo: "https://zippy-maamoul-810447.netlify.app/home",
+      github: "https://github.com/aventris/Cocktail-DB",
+      images: cocktailDBImages,
     },
   ],
   react: [
