@@ -3,6 +3,9 @@ import {
   todoImages,
   memoramaImages,
   cocktailDBImages,
+  ricknmortyImages,
+  pokeduxImages,
+  todoMachineImages,
 } from "@utils/projectImages";
 
 const projectInfo = {
@@ -30,6 +33,14 @@ const projectInfo = {
   ],
   react: [
     {
+      title: `Rick n' Mory Gallery`,
+      description: `A page where you can find info about Rick and Morty characters, locations and episodes`,
+      techs: "React | Scss | JavaScript (ES6+)",
+      demo: "https://keen-morse-f82afb.netlify.app/",
+      github: "https://github.com/aventris/React-Rick-and-Morty",
+      images: ricknmortyImages,
+    },
+    {
       title: `To-Do List`,
       description: `This is a web app of a To-Do list. Your To-Do list will be temporary
     store in the browser's local storage`,
@@ -45,6 +56,22 @@ const projectInfo = {
       demo: "https://enchanting-kulfi-9cb10c.netlify.app",
       github: "https://github.com/aventris/Memory-Game",
       images: memoramaImages,
+    },
+    {
+      title: `Pokedux`,
+      description: `List of the first pokemon generation, you can search pokemons and get information about them. Data will be saved in browser's local storage to keep info about your favorites pokemons`,
+      techs: "React | Redux | Css | JavaScript (ES6+)",
+      demo: "https://main--endearing-empanada-035510.netlify.app/",
+      github: "https://github.com/aventris/Pokedux",
+      images: pokeduxImages,
+    },
+    {
+      title: `Todo Machine`,
+      description: `A copycat web version of "To Do List" app by Splend Apps. You can add todos to diferent list, create new lists and assing todo to a specific day-time, this todos will be organized in schedule time. Data will be saved in your browser's local storage to keep track of your todos`,
+      techs: "React | Css | JavaScript (ES6+)",
+      demo: "https://main--superb-gingersnap-8bfc77.netlify.app/",
+      github: "https://github.com/aventris/Todo-Machine",
+      images: todoMachineImages,
     },
   ],
 };

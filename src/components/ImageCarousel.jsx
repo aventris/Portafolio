@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, Pagination } from "swiper";
@@ -8,7 +8,7 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "@styles/ImageCarousel.scss";
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images, onToggleModal }) => {
   return (
     <Swiper
       className="mySwiper"
@@ -18,10 +18,16 @@ const ImageCarousel = ({ images }) => {
       spaceBetween={50}
       slidesPerView={1}
       loop
+      onClick={onToggleModal}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index} className="swiper-image-container">
-          <img src={image} alt="" className="swiper-image" />
+          <img
+            onClick={(e) => e.stopPropagation()}
+            src={image}
+            alt=""
+            className="swiper-image"
+          />
         </SwiperSlide>
       ))}
     </Swiper>

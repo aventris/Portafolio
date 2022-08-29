@@ -1,0 +1,43 @@
+.imageCarouselModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50px;
+  height: 100%;
+  z-index: 2;
+  transition: all ease-in-out 500ms;
+  &.hidden {
+    transform: scale(0);
+  }
+  &.visible {
+    transform: scale(1);
+  }
+
+  .container {
+    width: 90%;
+    padding: 10px;
+    padding-top: 40px;
+    position: relative;
+    background-color: #303030;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px #212121;
+    svg {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .imageCarouselModal {
+    left: 0;
+  }
+}
