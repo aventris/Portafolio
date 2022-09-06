@@ -109,7 +109,7 @@ $project-card-height: 700px;
   opacity: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .project {
     grid-template-columns: minmax(275px, 1fr);
     //grid-template-rows: 250px 250px 40px;

@@ -35,7 +35,9 @@ const ImageCarouselModal = ({ images, onToggleModal }) => {
     >
       <div className="container" ref={boxRef}>
         <CgClose onClick={handleClose} />
-        <ImageCarousel images={images} />
+        <div className="images-container">
+          <ImageCarousel images={images} />
+        </div>
       </div>
     </div>
   );
