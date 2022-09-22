@@ -41,10 +41,11 @@
       max-width: $content-max-width;
       h1 {
         color: white;
+        font-size: min(2em, 4vw);
       }
       p {
         opacity: 0.6;
-        font-size: min(1.5vw, 16px);
+        font-size: min(2.5vw, 16px);
       }
     }
   }

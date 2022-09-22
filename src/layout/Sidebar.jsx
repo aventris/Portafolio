@@ -86,7 +86,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
-    if (!mq.matches) {
+    if (!mq.matches && sidebarOpen === true) {
       toggleSidebar();
     }
   }, [pathname]);
