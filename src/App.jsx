@@ -3,6 +3,7 @@ import { HashRouter } from "react-router-dom";
 import Home from "@components/Home";
 
 import "@styles/App.scss";
+import "@styles/Modal.scss";
 import Sidebar from "./layout/Sidebar";
 import BackgroundAnimation from "@components/BackgroundAnimation";
 
