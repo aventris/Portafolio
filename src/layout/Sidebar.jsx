@@ -125,7 +125,7 @@ const Sidebar = () => {
         />
       </ul>
       <div className="sidebar-footer">
-        <span>© 2022 Ismael Pérez Ortega</span>
+        <span>© 2023 Ismael Pérez Ortega</span>
         <br />
         {sidebarOpen && <span>www.ismael-po.com</span>}
       </div>
