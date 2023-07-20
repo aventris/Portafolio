@@ -32,8 +32,7 @@ const Home = () => {
             <p>
               I am Ismael Pérez, a computer system engineer from Mexico who
               loves web development. I'm familiar with React and Angular
-              frameworks for 1 year. I'm looking for a junior
-              front-end/full-stack position, i like to face new challenges in
+              frameworks for over a year. I'm looking for a front-end/full-stack position, i like to face new challenges in
               order to lear new skills.
             </p>
           </div>
@@ -50,15 +49,21 @@ const Home = () => {
             </p>
             <p>Here are a few technologies I’ve been working with recently</p>
             <ul className="about-list">
-              <li>Html</li>
-              <li>CSS & (Sass)</li>
+              <li>HTML5 + CSS3 & Sass</li>
               <li>JavaScript (ES6+)</li>
               <li>Typescript</li>
               <li>React</li>
               <li>Redux</li>
               <li>Angular</li>
               <li>Node.js</li>
-              <li>Git</li>
+              <li>JSON</li>
+              <li>API REST</li>
+              <li>SQL</li>
+              <li>PL/SQL</li>
+              <li>C#</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>AWS</li>
             </ul>
           </section>
           <section className="about-photo">
