@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import EmailConfirmation from "./EmailConfirmation";
 import "@styles/Contact.scss";
 
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [error, setError] = useState(false);
@@ -105,6 +107,14 @@ const Contact = () => {
               </button>
             </div>
           </form>
+        </div>
+        <div className="contact-social">
+          <a href="https://www.linkedin.com/in/ismael-po/" target="_blank">
+            <BsLinkedin />
+          </a>
+          <a href="https://github.com/aventris" target="_blank">
+            <BsGithub />
+          </a>
         </div>
       </div>
       {confirmation.toggle ? (

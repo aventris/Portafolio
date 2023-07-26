@@ -45,10 +45,12 @@ const Project = ({ title, description, techs, demo, github, images }) => {
             <ImageCarousel images={images} onToggleModal={handleToggleModal} />
           </div>
           <div className="project-info">
-            <h4>Technologies used:</h4>
-            <p>{techs}</p>
-            <h4>Project description:</h4>
             <p>{description}</p>
+            <div className="project-techs">
+              {techs.map((tech) => (
+                <span key={tech}>{tech}</span>
+              ))}
+            </div>
           </div>
           <div className="project-demo">
             <a className="project-demo-card" href={demo} target="_blank">
