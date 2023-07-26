@@ -32,7 +32,7 @@ const Home = () => {
             <p>
               I'm a computer system engineer from Mexico who loves web
               development. I'm familiar with React and Angular frameworks for
-              over a year. I'm looking for a junior/mid front-end/full-stack
+              over a year. Now i'm looking for a junior/mid front-end/full-stack
               position, i'm ready to face new challenges.
             </p>
           </div>
@@ -49,15 +49,21 @@ const Home = () => {
             </p>
             <p>Here are a few technologies I’ve been working with recently</p>
             <ul className="about-list">
-              <li>Html</li>
-              <li>CSS & (Sass)</li>
+              <li>HTML5 + CSS3 & Sass</li>
               <li>JavaScript (ES6+)</li>
               <li>Typescript</li>
               <li>React</li>
               <li>Redux</li>
               <li>Angular</li>
               <li>Node.js</li>
-              <li>Git</li>
+              <li>JSON</li>
+              <li>API REST</li>
+              <li>SQL</li>
+              <li>PL/SQL</li>
+              <li>C#</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>AWS</li>
             </ul>
           </section>
           <section className="about-photo">
