@@ -19,7 +19,7 @@ const Project = ({ title, description, techs, demo, github, images }) => {
         setState(entry.isIntersecting);
         if (entry.isIntersecting) observerRef.current.disconnect();
       },
-      { threshold: 0.4 }
+      { threshold: 0.3 }
     );
 
     observerRef.current.observe(boxRef.current);
@@ -45,7 +45,7 @@ const Project = ({ title, description, techs, demo, github, images }) => {
             <ImageCarousel images={images} onToggleModal={handleToggleModal} />
           </div>
           <div className="project-info">
-            <h4>Teconogies used:</h4>
+            <h4>Technologies used:</h4>
             <p>{techs}</p>
             <h4>Project description:</h4>
             <p>{description}</p>

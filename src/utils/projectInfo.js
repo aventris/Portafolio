@@ -24,7 +24,7 @@ const projectInfo = {
     {
       title: `Cocktail DB`,
       description:
-        "A webpage containing a collection of drinks where you can check for the recipie of a cocktail. You can search a cocktail by name, ingredient or a specific tag ",
+        "A webpage containing a collection of drinks where you can check for the recipe of a cocktail. You can search a cocktail by name, ingredient or a specific tag ",
       techs: "Angular | Scss | Typescript",
       demo: "https://zippy-maamoul-810447.netlify.app/home",
       github: "https://github.com/aventris/Cocktail-DB",
@@ -33,7 +33,7 @@ const projectInfo = {
   ],
   react: [
     {
-      title: `Rick n' Mory Gallery`,
+      title: `Rick n' Morty Gallery`,
       description: `A page where you can find info about Rick and Morty characters, locations and episodes`,
       techs: "React | Scss | JavaScript (ES6+)",
       demo: "https://keen-morse-f82afb.netlify.app/",
@@ -42,7 +42,7 @@ const projectInfo = {
     },
     {
       title: `Todo Machine`,
-      description: `A copycat web version of "To Do List" app by Splend Apps. You can add todos to diferent list, create new lists and assing todo to a specific day-time, this todos will be organized in schedule time. Data will be saved in your browser's local storage to keep track of your todos`,
+      description: `A copycat web version of "To Do List" app by Splend Apps. You can add ToDos to different list, create new lists and assign todo to a specific day-time, this ToDos will be organized in schedule time. Data will be saved in your browser's local storage to keep track of your ToDos`,
       techs: "React | Css | JavaScript (ES6+)",
       demo: "https://main--superb-gingersnap-8bfc77.netlify.app/",
       github: "https://github.com/aventris/Todo-Machine",
@@ -50,8 +50,8 @@ const projectInfo = {
     },
 
     {
-      title: `Rick n' Mory Memorama`,
-      description: `A memory game with the characters from Rick n' Morty series`,
+      title: `Rick n' Morty Memory game`,
+      description: `A matching game with the characters from Rick n' Morty series`,
       techs: "React | Scss | JavaScript (ES6+)",
       demo: "https://enchanting-kulfi-9cb10c.netlify.app",
       github: "https://github.com/aventris/Memory-Game",
@@ -59,7 +59,7 @@ const projectInfo = {
     },
     {
       title: `Pokedux`,
-      description: `List of the first pokemon generation, you can search pokemons and get information about them. Data will be saved in browser's local storage to track info about your favorites pokemons`,
+      description: `List of the first pokemon generation, you can search Pokemon and get information about them. Data will be saved in browser's local storage to track info about your favorites pokemon`,
       techs: "React | Redux | Css | JavaScript (ES6+)",
       demo: "https://main--endearing-empanada-035510.netlify.app/",
       github: "https://github.com/aventris/Pokedux",

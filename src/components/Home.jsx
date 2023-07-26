@@ -30,11 +30,10 @@ const Home = () => {
             <h1>Front End Developer</h1>
             <p>Hi!</p>
             <p>
-              I am Ismael Pérez, a computer system engineer from Mexico who
-              loves web development. I'm familiar with React and Angular
-              frameworks for 1 year. I'm looking for a junior
-              front-end/full-stack position, i like to face new challenges in
-              order to lear new skills.
+              I'm a computer system engineer from Mexico who loves web
+              development. I'm familiar with React and Angular frameworks for
+              over a year. I'm looking for a junior/mid front-end/full-stack
+              position, i'm ready to face new challenges.
             </p>
           </div>
         </div>
